@@ -1,0 +1,14 @@
+#!name=Ranyidu
+#!desc=
+
+#=============UserScript=============#
+
+[Script]
+mtxx = type=http-response, pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home), script-path=https://raw.githubusercontent.com/Ranyidu/Rewrite/main/mtxx.js, requires-body=true, max-size=-1, timeout=60
+
+chatbotai = type=http-response, pattern= ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Ranyidu/Rewrite/main/chatbotai.js, requires-body=true, max-size=-1, timeout=60
+
+rrxk = type=http-response, pattern= ^https:\/\/api\.renrenxiaoka\.com\/((batch\-)?order|member|withdraw|profile|draw-record), script-path=人人销卡.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, buy.itunes.apple.com, api.renrenxiaoka.com
